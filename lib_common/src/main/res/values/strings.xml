@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">lib_common</string>
+
+    <string name="current_internet_invalid">当前网络未连接</string>
+    <string name="internet_base_url_null">baseUrl不能为空</string>
+
+    <!--loading-->
+    <string name="loadtext">正在加载···</string>
+
+    <!--EasyRecyclerView库的公用布局-->
+    <string name="more_loading">加载中…</string>
+    <string name="no_more">没有更多了</string>
+    <string name="load_error_resume">加载出错，点击重试</string>
+    <string name="more">更多</string>
+    <string name="no_data">暂无数据</string>
+
+    <string name="click_count_hint1">密码输入次数过多,请</string>
+    <string name="click_count_hint2">分钟之后再试</string>
+    <string name="address_length_err5">地址格式不正确</string>
+    <string name="copy">已帮您复制到剪贴板</string>
+    <string name="copy_null">复制的内容不能为空</string>
+    <string name="login_401">登录失效，请重新登录</string>
+    <string name="install_t4">请允许安装未知来源的应用</string>
+
+
+    <string name="title403">上拉加载更多</string>
+    <string name="title404">释放立即加载</string>
+    <string name="title405">正在加载...</string>
+    <string name="title406">正在刷新...</string>
+    <string name="title407">加载完成</string>
+    <string name="title408">加载失败</string>
+    <string name="title409">没有更多数据了</string>
+    <string name="title410">下拉可以刷新</string>
+    <string name="title411">刷新完成</string>
+    <string name="title412">刷新失败</string>
+    <string name="title413">上次更新 M-d HH:mm</string>
+
+    <string name="empty_text">暂无数据列表哦</string>
+    <string name="err_msg">发生未知错误</string>
+    <string name="err_connnect">请求失败</string>
+
+    <string name="help">帮助</string>
+    <string name="permission1">需要开启权限后才能使用</string>
+    <string name="permission2">当前应用缺少 </string>
+    <string name="permission3"> 权限。\n \n 请点击 \"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="refuse_permission">用户拒绝使用此权限！</string>
+    <string name="not_set_permission">用户未授予权限</string>
+    <string name="err_path">图片路径错误</string>
+    <string name="choose_already">该图片已被选择</string>
+    <string name="no">取消</string>
+    <string name="update_t2">去设置</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="about_fragment">FragmentAbout</string>
+
+    <!--语言提示工具类-->
+    <string name="checknull1">请输入%1$s</string>
+    <string name="checknull2">请输入%1$s(%2$s-%3$s)</string>
+    <string name="checkformat1">%1$s格式不正确，请重新输入</string>
+    <string name="checkformat2">%1$s格式不正确，请重新输入(%2$s-%3$s)</string>
+    <string name="checksuccess">%1$s成功</string>
+    <string name="checkfailure">%1$s失败</string>
+    <string name="statelogin">登录</string>
+    <string name="state_exchange">交易</string>
+    <string name="gist1">(6-10位数字字母组合)</string>
+    <string name="gist2">(6位数字)</string>
+    <string name="checkstate1">请输入%1$s密码</string>
+    <string name="checkstate2">请再次输入%1$s密码</string>
+    <string name="checkstate3">%1$s密码格式输入不正确%2$s</string>
+    <string name="checkstate4">两次密码输入不同，请重新输入</string>
+    <string name="checkwait">暂未开放，敬请期待</string>
+    <string name="token_out">登录过期,请重新登录</string>
+    <string name="large_image">图片过大，请压缩后重试</string>
+    <string name="net_err">网络不稳定，请稍后重试。</string>
+    <!--语言提示工具类-->
+
+    <string name="get_code">获取验证码</string>
+
+    <!--规则-->
+    <string name="letter1">0123456789</string>
+    <string name="letter2">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="letter3">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.@_</string>
+    <string name="letter4">0123456789.</string>
+
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+
+
+</resources>

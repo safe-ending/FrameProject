@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZhigeToolbar">
+        <attr name="toolbar_title" format="string" />
+        <attr name="toolbar_text_right" format="string" />
+    </declare-styleable>
+
+    <!--资源名为CustomTitleView-->
+    <declare-styleable name="CustomEditText2">
+        <attr name="text_hint_color" format="color" />
+        <attr name="text_color" format="color"/>
+        <attr name="hint_text" format="string"/>
+        <attr name="text_content" format="string"/>
+        <attr name="label_content" format="string"/>
+        <attr name="text_size2" format="dimension"/>
+        <attr name="maxLength2" format="integer"/>
+        <attr name="display_right_btn2" format="boolean"/>
+        <attr name="display_bootom_line" format="boolean"/>
+        <attr name="display_right_icon2" format="boolean"/>
+        <attr name="text_digst" format="string"/>
+        <attr name="text_singlle" format="boolean"/>
+        <attr name="text_inputtype" format="string"/>
+        <attr name="show_left_title" format="boolean"/>
+        <attr name="display_top_label" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="OptionItemView">
+        <attr name="title" format="string" />
+        <attr name="title_size" format="dimension" />
+        <attr name="title_color" format="color" />
+        <attr name="left_src" format="reference|color" />
+        <attr name="left_text" format="string" />
+        <attr name="left_text_size" format="dimension" />
+        <attr name="left_image_margin_left" format="dimension" />
+        <attr name="left_text_margin_left" format="dimension" />
+        <attr name="left_image_margin_right" format="dimension" />
+        <attr name="left_text_color" format="color" />
+        <attr name="right_src" format="reference|color" />
+        <attr name="right_text" format="string" />
+        <attr name="right_text_size" format="dimension" />
+        <attr name="right_image_margin_left" format="dimension" />
+        <attr name="right_image_margin_right" format="dimension" />
+        <attr name="right_text_margin_right" format="dimension" />
+        <attr name="right_text_color" format="color" />
+        <attr name="splite_mode" format="boolean" />
+        <attr name="left_hint_text" format="string" />
+        <attr name="left_hint_text_size" format="dimension" />
+        <attr name="left_hint_text_color" format="color" />
+
+    </declare-styleable>
+</resources>

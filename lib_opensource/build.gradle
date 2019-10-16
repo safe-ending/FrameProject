@@ -1,0 +1,178 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+
+}
+
+dependencies {
+
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    // Support libraries
+    api deps.support.app_compat
+    api deps.support.v4
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.recyclerview
+    api deps.appcompat.version
+
+    // 生命周期组建
+    api deps.lifecycle.runtime
+    api deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    api deps.room.runtime
+    annotationProcessor deps.room.compiler
+
+    //retrofit & http
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.adapter_rxjava2
+    api deps.okhttp.okhttp3
+    api deps.okhttp.okhttp3_logging_interceptor
+
+    // RxJava
+    api deps.rx_android
+
+    // 注解
+    api deps.butterknife.version
+    annotationProcessor  deps.butterknife.compiler
+
+    //路由器
+    api deps.arouter.runtime
+
+    //logutils
+    api deps.logutils
+    //下拉刷新
+    api deps.smart.version
+    //Parcel 序列器  用于各activity的数据双向绑定封装
+    api deps.parceler.version
+    //吐司
+    api deps.toast.version
+    //图片加载
+    api deps.glide.version
+    //状态页面
+    api deps.loadsir.version
+    //广播
+    api deps.eventbus.version
+    //官方布局
+    api deps.constraint.version
+    //网上封装的弹窗
+    api deps.loadingdialog.version
+    //权限请求
+    api deps.mpermission.version
+    //列表适配器
+    api deps.BaseRecyclerView.version
+    //通用的一些工具类
+    api deps.commonsio.version
+    //长连接
+    api deps.websocket.version
+    //沉浸式
+    api deps.systembartint.version
+
+    //二维码
+    api deps.zxing_lite.version
+    api deps.zxing.version
+    //鲁班压缩
+    api deps.luban.version
+    //圆形图片
+    api deps.circleimageview.version
+    //小红点
+    api deps.badgeview.version
+    //开关
+    api deps.switchbutton.version
+    //数据库
+    api deps.greendao.version
+    //适配器
+    api deps.lqradapter.version
+    //多dex
+    api deps.multidex.version
+    //db
+    api deps.sqlcipher.version
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            snapshotRepository(url: getsSnapshotUrl()) {
+                authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+            }
+            repository(url: getReleaseUrl()) {
+                authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+            }
+            pom.project {
+                version '1.0.0'
+                artifactId 'lib-opensource'
+                groupId getGroupId()
+                packaging getType()
+                description getDescription()
+            }
+        }
+    }
+}
+
+artifacts {
+    archives file('lib_opensource.aar')
+}
+
+def isReleaseBuild() {
+    return VERSION_NAME.contains("SNAPSHOT") == false
+}
+
+def getsSnapshotUrl() {
+    return hasProperty('MAVEN_REPO_SNAPSHOT_URL') ? MAVEN_REPO_SNAPSHOT_URL : ""
+}
+
+def getReleaseUrl() {
+    return hasProperty('MAVEN_REPO_RELEASE_URL') ? MAVEN_REPO_RELEASE_URL : ""
+}
+
+def getRepositoryUsername() {
+    return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
+}
+
+def getGroupId() {
+    return hasProperty('GROUP_ID') ? GROUP_ID : ""
+}
+
+def getType() {
+    return hasProperty('TYPE') ? TYPE : ""
+}
+
+def getDescription() {
+    return hasProperty('DESCRIPTION') ? DESCRIPTION : ""
+}
